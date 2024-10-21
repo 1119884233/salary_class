@@ -1,25 +1,27 @@
-#导入相应的库
 import requests
 
-import config.config
-from   config import *
-
-#获取源代码
-def get_html(url,headers):
-    response = requests.get(url,headers)
-#更改编码方式
-    response.encoding = "jbk"
+# 1.获取html代码
+def get_data(url,headers):
+    response = requests.get(url, headers=headers)
     if response.status_code == 200:
         return response.text
     else:
-        print("获取源代码错误")
+        print(response.status_code)
 
-def main():
-    url = config.url_html
-    headers = config.headers
-    html = get_html(url,headers)
-    print(html)
+#2.获取二进制流
+def get_content(url,headers):
+    response = requests.get(url,headers=headers)
+    if response.status_code == 200:
+        # 返回图片的二进制流
+        return response.content
+    else:
+        print(response.status_code)
 
-if __name__ == '__main__':
-    main()
-
+#3.获取二进制流,不需要头部的信息
+def get_content_no_headers(url):
+    response = requests.get(url)
+    if response.status_code == 200:
+        # 返回图片的二进制流
+        return response.content
+    else:
+        print(response.status_code)
