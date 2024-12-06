@@ -1,4 +1,3 @@
-import os
 
 #二进制流的保存
 def save_content(file_name,content):

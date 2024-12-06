@@ -1,14 +1,19 @@
 import requests
-from config import config
+from config import config1
 import re
 import os
-import data_get
 
 
-from config.config import params
+from config.config1 import params
 
 
-
+# 获取百度图片的html代码
+def get_data(url,headers,params):
+    response = requests.get(url, headers=headers,params=params)
+    if response.status_code == 200:
+        return response.text
+    else:
+        print(response.status_code)
 
 # 从html代码中提取图片链接
 def parse_img_url(html):
@@ -34,7 +39,7 @@ def save_img(content,img_name):
 
 #创建文件夹
 def create_new_file(file_name):
-    os.mkdir(config.img_file+file_name)
+    os.mkdir(config1.img_file+file_name)
 def main():
 
    # 输入要抓取的图片名字
@@ -50,10 +55,10 @@ def main():
        print("************正在抓取第 "+str(i+1)+" 页的图片******************")
        # 引用加载头
        pic_page = pic_page + 1
-       url,headers,params = config.pic_params(str(pic_page*30),pic_name)
+       url,headers,params = config1.pic_params(str(pic_page*30),pic_name)
        print(url)
        # 获取图片源代码
-       data = data_get.data_get.html(url,headers)
+       data = get_data(url,headers,params)
        # print(data)
        # 获取图片链接
        img_url = parse_img_url(data)
@@ -62,7 +67,7 @@ def main():
            pic_num = pic_num+1
            # print(pic_num)
            img_content = get_img_content(img)
-           img_name = config.img_file+pic_name+"/"+str(pic_num)+".jpg"
+           img_name = config1.img_file+pic_name+"/"+str(pic_num)+".jpg"
            save_img(img_content,img_name)
 
 if __name__ == '__main__':
