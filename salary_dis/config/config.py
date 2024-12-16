@@ -81,7 +81,8 @@ def mysql_info():
     host="localhost"
     user="root"
     passwd="123456"
-    db="51job2"
+    db = "user_info"
+    # db="51job2"
     return host,user,passwd,db
 
 #  ************************ 定义neo4j参数 ****************************
