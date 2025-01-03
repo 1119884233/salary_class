@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Awesome-pyecharts</title>
+                <script type="text/javascript" src="https://assets.pyecharts.org/assets/v5/echarts.min.js"></script>
+
+</head>
+<body >
+    <div id="959c39cf17554671b49713355ec1f87a" class="chart-container" style="width:1000px; height:600px; "></div>
+    <script>
+        var chart_959c39cf17554671b49713355ec1f87a = echarts.init(
+            document.getElementById('959c39cf17554671b49713355ec1f87a'), 'white', {renderer: 'canvas'});
+        var option_959c39cf17554671b49713355ec1f87a = {
+    "animation": true,
+    "animationThreshold": 2000,
+    "animationDuration": 1000,
+    "animationEasing": "cubicOut",
+    "animationDelay": 0,
+    "animationDurationUpdate": 300,
+    "animationEasingUpdate": "cubicOut",
+    "animationDelayUpdate": 0,
+    "aria": {
+        "enabled": false
+    },
+    "color": [
+        "#5470c6",
+        "#91cc75",
+        "#fac858",
+        "#ee6666",
+        "#73c0de",
+        "#3ba272",
+        "#fc8452",
+        "#9a60b4",
+        "#ea7ccc"
+    ],
+    "series": [
+        {
+            "type": "graph",
+            "layout": "circular",
+            "symbolSize": 10,
+            "circular": {
+                "rotateLabel": true
+            },
+            "force": {
+                "repulsion": 50,
+                "gravity": 0.2,
+                "edgeLength": 30,
+                "friction": 0.6,
+                "layoutAnimation": true
+            },
+            "label": {
+                "show": true,
+                "position": "right",
+                "margin": 8,
+                "valueAnimation": false
+            },
+            "lineStyle": {
+                "show": true,
+                "width": 1,
+                "opacity": 1,
+                "curveness": 0.3,
+                "type": "solid",
+                "color": "source"
+            },
+            "roam": true,
+            "draggable": false,
+            "focusNodeAdjacency": true,
+            "data": [
+                {
+                    "name": "Mlle Gillenormand",
+                    "category": 0,
+                    "value": 20.457146
+                },
+                {
+                    "name": "Gavroche",
+                    "category": 1
+                },
+                {
+                    "name": "Eponine",
+                    "category": 2
+                },
+                {
+                    "name": "Cochepaille",
+                    "category": 3
+                },
+                {
+                    "name": "Chenildieu",
+                    "category": 4
+                },
+                {
+                    "name": "Brujon",
+                    "category": 5
+                },
+                {
+                    "name": "Mme Hucheloup",
+                    "category": 6
+                },
+                {
+                    "name": "Myriel",
+                    "category": 7
+                },
+                {
+                    "name": "Valjean",
+                    "category": 8
+                }
+            ],
+            "categories": [
+                {
+                    "name": "\u7c7b\u522b0",
+                    "itemStyle": {
+                        "color": "blue"
+                    }
+                },
+                {
+                    "name": "\u7c7b\u522b1",
+                    "itemStyle": {
+                        "color": "green"
+                    }
+                },
+                {
+                    "name": "\u7c7b\u522b2",
+                    "itemStyle": {
+                        "color": "orange"
+                    }
+                },
+                {
+                    "name": "\u7c7b\u522b3",
+                    "itemStyle": {
+                        "color": "red"
+                    }
+                },
+                {
+                    "name": "\u7c7b\u522b4",
+                    "itemStyle": {
+                        "color": "cyan"
+                    }
+                },
+                {
+                    "name": "\u7c7b\u522b5",
+                    "itemStyle": {
+                        "color": "magenta"
+                    }
+                },
+                {
+                    "name": "\u7c7b\u522b6",
+                    "itemStyle": {
+                        "color": "yellow"
+                    }
+                },
+                {
+                    "name": "\u7c7b\u522b7",
+                    "itemStyle": {
+                        "color": "purple"
+                    }
+                },
+                {
+                    "name": "\u7c7b\u522b8",
+                    "itemStyle": {
+                        "color": "pink"
+                    }
+                }
+            ],
+            "edgeLabel": {
+                "show": false,
+                "margin": 8,
+                "valueAnimation": false
+            },
+            "edgeSymbol": [
+                null,
+                null
+            ],
+            "edgeSymbolSize": 10,
+            "links": [
+                {
+                    "source": "Mlle Gillenormand",
+                    "target": "Gavroche"
+                },
+                {
+                    "source": "Mlle Gillenormand",
+                    "target": "Eponine"
+                },
+                {
+                    "source": "Eponine",
+                    "target": "Cochepaille"
+                },
+                {
+                    "source": "Eponine",
+                    "target": "Chenildieu"
+                }
+            ]
+        }
+    ],
+    "legend": [
+        {
+            "data": [
+                "\u7c7b\u522b0",
+                "\u7c7b\u522b1",
+                "\u7c7b\u522b2",
+                "\u7c7b\u522b3",
+                "\u7c7b\u522b4",
+                "\u7c7b\u522b5",
+                "\u7c7b\u522b6",
+                "\u7c7b\u522b7",
+                "\u7c7b\u522b8"
+            ],
+            "selected": {},
+            "show": true,
+            "left": "2%",
+            "top": "20%",
+            "orient": "vertical",
+            "padding": 5,
+            "itemGap": 10,
+            "itemWidth": 25,
+            "itemHeight": 14,
+            "backgroundColor": "transparent",
+            "borderColor": "#ccc",
+            "borderRadius": 0,
+            "pageButtonItemGap": 5,
+            "pageButtonPosition": "end",
+            "pageFormatter": "{current}/{total}",
+            "pageIconColor": "#2f4554",
+            "pageIconInactiveColor": "#aaa",
+            "pageIconSize": 15,
+            "animationDurationUpdate": 800,
+            "selector": false,
+            "selectorPosition": "auto",
+            "selectorItemGap": 7,
+            "selectorButtonGap": 10
+        }
+    ],
+    "tooltip": {
+        "show": true,
+        "trigger": "item",
+        "triggerOn": "mousemove|click",
+        "axisPointer": {
+            "type": "line"
+        },
+        "showContent": true,
+        "alwaysShowContent": false,
+        "showDelay": 0,
+        "hideDelay": 100,
+        "enterable": false,
+        "confine": false,
+        "appendToBody": false,
+        "transitionDuration": 0.4,
+        "textStyle": {
+            "fontSize": 14
+        },
+        "borderWidth": 0,
+        "padding": 5,
+        "order": "seriesAsc"
+    },
+    "title": [
+        {
+            "show": true,
+            "text": "Graph Example",
+            "target": "blank",
+            "subtarget": "blank",
+            "padding": 5,
+            "itemGap": 10,
+            "textAlign": "auto",
+            "textVerticalAlign": "auto",
+            "triggerEvent": false
+        }
+    ]
+};
+        chart_959c39cf17554671b49713355ec1f87a.setOption(option_959c39cf17554671b49713355ec1f87a);
+    </script>
+</body>
+</html>
